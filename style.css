@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4a4343;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+#left-panel {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#dictionary-app {
+    width: 100%; 
+    max-width: 800px;
+    background-color: teal;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: auto;
+}
+
+#word-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#wordInput{
+    border-radius: 8px;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 10px; 
+}
+
+#definition {
+    margin-top: 15px;
+}
+
+#liked-words, #searched-words {
+    margin-top: 20px;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#liked-words ul, #searched-words ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#liked-words h2, #searched-words h2 {
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#word-list-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease-out;
+}
+
+#liked-words, #searched-words {
+    flex: 1;
+    margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    #left-panel {
+        width: 50%;
+        box-shadow: none;
+    }
+
+    #dictionary-app {
+        max-width: 200px;
+        margin: 20px;
+        max-height: 300px;
+    }
+}

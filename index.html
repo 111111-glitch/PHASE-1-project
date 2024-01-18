@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="left-panel">
+        <div id="liked-words">
+            <h2>Liked Words</h2>
+            <ul id="liked-list"></ul>
+        </div>
+
+        <div id="searched-words">
+            <h2>Searched Words</h2>
+            <ul id="searched-list"></ul>
+        </div>
+    </div>
+    <div id="dictionary-app">
+        <div id="word-input-container">
+            <input type="text" id="wordInput" placeholder="Enter a word">
+            <button id="searchButton">Search</button>
+        </div>
+        <p id="definition"></p>
+        <button id="likeButton" style="display: none;">Like</button>
+
+        <div id="word-list-container">
+        
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

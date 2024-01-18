@@ -15,6 +15,7 @@ body {
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Make left panel scrollable on smaller screens */
 }
 
 #dictionary-app {
@@ -35,9 +36,13 @@ body {
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-#wordInput{
+
+#wordInput {
     border-radius: 8px;
+    width: 100%; /* Make the input full width */
+    box-sizing: border-box;
 }
+
 input {
     flex: 1;
     padding: 10px;
@@ -60,7 +65,7 @@ button {
 
 #liked-words, #searched-words {
     margin-top: 20px;
-    overflow-y: hidden;
+    overflow-y: auto; /* Make liked and searched words scrollable */
     transition: max-height 0.3s ease-out;
 }
 
@@ -96,13 +101,13 @@ li {
 
 @media (max-width: 900px) {
     #left-panel {
-        width: 50%;
+        width: 100%;
         box-shadow: none;
     }
 
     #dictionary-app {
-        max-width: 200px;
+        max-width: none;
         margin: 20px;
-        max-height: 300px;
+        max-height: none;
     }
 }
